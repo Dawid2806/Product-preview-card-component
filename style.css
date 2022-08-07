@@ -39,6 +39,7 @@ body {
 .container__content__category {
   text-transform: uppercase;
   letter-spacing: 5px;
+  color: var(--DarkGrayishBlue);
 }
 .container__content__title {
   font-size: 26px;
