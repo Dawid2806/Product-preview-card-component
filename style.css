@@ -25,12 +25,13 @@ body {
   background-color: var(--White);
   border-radius: 15px;
 }
-.container__image,
-.container__image__desktop {
+.container__image {
   border-radius: 15px 15px 0 0;
 }
+
 .container__image__desktop {
   display: none;
+  border-radius: 15px 0 0 15px;
 }
 .container__content {
   padding: 2rem;
