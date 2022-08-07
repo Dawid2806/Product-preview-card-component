@@ -1,0 +1,102 @@
+:root {
+  --DarkCyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+
+  --VeryDarkBlue: hsl(212, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Fraunces", serif;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--Cream);
+}
+.container {
+  max-width: 768px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto 2rem;
+  width: 95%;
+  background-color: var(--White);
+  border-radius: 15px;
+}
+.container__image,
+.container__image__desktop {
+  border-radius: 15px 15px 0 0;
+}
+.container__image__desktop {
+  display: none;
+}
+.container__content {
+  padding: 2rem;
+}
+.container__content__category {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.container__content__title {
+  font-size: 26px;
+  width: 70%;
+}
+.container__content__description {
+  color: var(--DarkGrayishBlue);
+}
+.container__content__price {
+  margin-bottom: 1rem;
+}
+.container__content__current {
+  font-size: 26px;
+  font-family: "Fraunces", serif;
+  color: var(--DarkCyan);
+  font-weight: 700;
+  padding-right: 2rem;
+}
+.container__content__price__promo {
+  text-decoration: line-through;
+  color: var(--DarkGrayishBlue);
+}
+.container__content__button {
+  width: 90%;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--DarkCyan);
+  font-size: 16px;
+  color: var(--White);
+  font-weight: 700;
+  transition: 0.3s;
+}
+.container__content__button:hover {
+  background-color: var(--VeryDarkBlue);
+}
+.container__content__button > img {
+  margin-right: 0.5rem;
+}
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+  .container__image {
+    display: none;
+  }
+  .container__image__desktop {
+    display: block;
+    width: 50%;
+  }
+  .container__content__title {
+    font-size: 36px;
+  }
+
+  .container__content__button,
+  .container__content__price,
+  .container__content__description,
+  .container__content__title,
+  .container__content__category {
+    margin-top: 2rem;
+  }
+}
